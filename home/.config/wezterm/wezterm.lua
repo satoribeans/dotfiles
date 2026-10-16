@@ -2,6 +2,9 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+config.initial_cols = 120
+config.initial_rows = 40
+
 config.color_scheme = "rose-pine-moon"
 config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 15.0
@@ -43,5 +46,14 @@ wezterm.on("window-focus-changed", function(window)
 	overrides.window_background_opacity = opacity
 	window:set_config_overrides(overrides)
 end)
+
+config.keys = {
+  {
+    -- Choose your preferred shortcut (e.g., Option + W), Quake Mode style
+    key = 'w',
+    mods = 'OPTION',
+    action = wezterm.action.ToggleApplicationVisible,
+  },
+}
 
 return config

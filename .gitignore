@@ -1,6 +1,16 @@
 # OS files
 .DS_Store
 
+# log files
+*.log
+*.lock
+*.lua.swp
+*.sock.agent
+
+# herdr files
+*/.config/herdr/session-snapshots/
+*/.config/herdr/session.json
+
 # idea files
 .idea/
 

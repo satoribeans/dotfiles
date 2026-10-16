@@ -26,10 +26,15 @@ in
     enable = true;
     autosuggestion.enable = true;      # ghost text from history
     syntaxHighlighting.enable = true;  # commands turn green when valid
-    initContent = ''
-      bindkey '^f' autosuggest-accept
+    initContent = ''                   
+     bindkey '^f' autosuggest-accept  
     '';
+    #initExtra = ''
+    #  bindkey '\t\t' autosuggest-accept
+    #'';
     shellAliases = {
+      ls = "ls -alt";
+      nv = "nvim";
       ".." = "cd ..";
       add = "git add .";
       push = "git push";
